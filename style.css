@@ -1,0 +1,43 @@
+#buyColASAPToggleLabel {
+    visibility: hidden;
+}
+
+#buyColonyBuyer {
+    visibility: hidden;
+}
+
+#getQueen {
+    visibility: hidden;
+}
+
+#startCol {
+    visibility: hidden;
+}
+
+#antCount {
+    visibility: hidden;
+}
+
+#moneyCount {
+    visibility: hidden;
+}
+
+#buyStealingMoney {
+    visibility: hidden;
+}
+
+#stealMoneyButton {
+    visibility: hidden;
+}
+
+#queenAntCount {
+    visibility: hidden;
+}
+
+#colonyCount {
+    visibility: hidden;
+}
+
+#buyMultLabel {
+    visibility: hidden;
+}
