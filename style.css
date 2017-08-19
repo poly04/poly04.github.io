@@ -1,4 +1,4 @@
-.divbutton {
+div.divbutton {
     user-select: none;
     background: linear-gradient(white, lightgray);
     border-style: solid;
