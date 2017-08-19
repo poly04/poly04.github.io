@@ -43,16 +43,21 @@ function startColony(multiplier) {
     }
 }
 
+var lastUpdate = new Date().getTime();
 setInterval(function () {
     "use strict";
     var i,
-        buyMultVal = parseInt(document.getElementById("buyMult").value, 10);
+        buyMultVal = parseInt(document.getElementById("buyMult").value, 10),
+        thisUpdate = new Date().getTime(),
+        diff = thisUpdate - lastUpdate;
+    
+    diff = Math.round(diff / 500);
     
     //create ants from colonies
     for (i = 0; i < colonies.length; i += 1) {
-        ants += 1;
-        colonies[i].ticksLeft -= 1;
-        if (colonies[i].ticksLeft === 0) {
+        ants += 1 * diff;
+        colonies[i].ticksLeft -= 1 * diff;
+        if (colonies[i].ticksLeft <= 0) {
             colonies.splice(i, 1);
         }
     }
@@ -60,8 +65,8 @@ setInterval(function () {
     //buy a colony if possible
     if (buyColoniesASAP) {
         if (document.getElementById("buyColoniesASAPToggle").checked) {
-            buyQueenAnt(1);
-            startColony(1);
+            buyQueenAnt(1 * diff);
+            startColony(1 * diff);
         }
     }
     
@@ -87,6 +92,8 @@ setInterval(function () {
     }
     
     updateHTML();
+    
+    lastUpdate = thisUpdate;
 }, 500);
 
 function incrementAnts() {
