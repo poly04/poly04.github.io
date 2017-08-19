@@ -3,6 +3,7 @@ var queenAnts = 0;
 var colonies = [];
 var money = 0;
 var buyColoniesASAP = false;
+var colonyBuyerUnlocked = false;
 var buyMultiplier = 1;
 var stealMoneyUnlocked = false;
 
@@ -72,10 +73,11 @@ setInterval(function () {
     if (queenAnts >= 1) {
         document.getElementById("startCol").style.visibility = "visible";
     }
-    if (ants >= 150) {
+    if (ants >= 150 && !colonyBuyerUnlocked) {
         document.getElementById("buyColonyBuyer").style.visibility = "visible";
+        colonyBuyerUnlocked = true;
     }
-    if (ants >= 1000) {
+    if (ants >= 1000 && !stealMoneyUnlocked) {
         document.getElementById("buyStealingMoney").style.visibility = "visible";
     }
     
@@ -107,8 +109,10 @@ function buyColonyBuyer() {
 function buyStealMoney() {
     "use strict";
     if (ants >= 1000) {
+        ants -= 1000;
         stealMoneyUnlocked = true;
         document.getElementById("stealMoneyButton").style.visibility = "visible";
+        document.getElementById("buyStealingMoney").style.visibility = "hidden";
     }
 }
 
