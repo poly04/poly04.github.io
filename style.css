@@ -1,3 +1,19 @@
+.divbutton {
+    user-select: none;
+    background: linear-gradient(white, lightgray);
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    padding: 1px 6px 1px 6px;
+    display: inline-block;
+    font: 13.3333px Arial;
+    cursor: pointer;
+}
+
+.divbutton:active {
+    background: linear-gradient(lightgray, white);
+}
+
 #buyColASAPToggleLabel {
     visibility: hidden;
 }

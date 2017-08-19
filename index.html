@@ -5,8 +5,8 @@
     </head>
     
     <body>
-        <button onclick="incrementAnts()">get more ants</button>
-        <button id="stealMoneyButton" onclick="stealMoney()">Steal Money</button>
+        <div class="divbutton" onclick="incrementAnts()">get more ants</div>
+        <div class="divbutton" id="stealMoneyButton" onclick="stealMoney()">Steal Money</div>
         <p id="antCount">Ants: 0</p>
         <p id="queenAntCount">Queen Ants: 0</p>
         <p id="colonyCount">Colonies: 0</p>
@@ -26,12 +26,12 @@
         
         <div id="shop">
             <div id="buildings">
-                <button id="getQueen" onclick="buyQueenAnt(buyMultiplier)">Buy Queen Ant: 50 ants</button>
-                <button id="startCol" onclick="startColony(buyMultiplier)">Start Colony: 1 Queen Ant</button>
+                <div class="divbutton" id="getQueen" onclick="buyQueenAnt(buyMultiplier)">Buy Queen Ant: 50 ants</div>
+                <div class="divbutton" id="startCol" onclick="startColony(buyMultiplier)">Start Colony: 1 Queen Ant</div>
             </div>
             <div id="upgrades">
-                <button id="buyColonyBuyer" onclick="buyColonyBuyer()">Buy Colonies ASAP: 150 ants</button>
-                <button id="buyStealingMoney" onclick="buyStealMoney()">Buy 'Stealing Money': 1000 ants</button>
+                <div class="divbutton" id="buyColonyBuyer" onclick="buyColonyBuyer()">Buy Colonies ASAP: 150 ants</div>
+                <div class="divbutton" id="buyStealingMoney" onclick="buyStealMoney()">Buy 'Stealing Money': 1000 ants</div>
             </div>
         </div>
         
