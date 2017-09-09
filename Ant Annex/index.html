@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Ant Annex</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="divbutton" onclick="incrementAnts()">get more ants</div>
+        <div class="divbutton" id="stealMoneyButton" onclick="stealMoney()">Steal Money</div>
+        <p id="antCount">Ants: 0</p>
+        <p id="queenAntCount">Queen Ants: 0</p>
+        <p id="colonyCount">Colonies: 0</p>
+        <p id="moneyCount">Money: 0 dollars</p>
+        
+        <div id="settings">
+            <label id="buyColASAPToggleLabel" for="buyColoniesASAPToggle">
+                Buy Colonies ASAP
+                <input id="buyColoniesASAPToggle" type="checkbox">
+            </label>
+            
+            <label id="buyMultLabel" for="byuMult">
+                Buy Multiplier
+                <input id="buyMult" type = "number" value="1">
+            </label>
+        </div>
+        
+        <div id="shop">
+            <div id="buildings">
+                <div class="divbutton" id="getQueen" onclick="buyQueenAnt(buyMultiplier)">Buy Queen Ant: 50 ants</div>
+                <div class="divbutton" id="startCol" onclick="startColony(buyMultiplier)">Start Colony: 1 Queen Ant</div>
+            </div>
+            <div id="upgrades">
+                <div class="divbutton" id="buyColonyBuyer" onclick="buyColonyBuyer()">Buy Colonies ASAP: 150 ants</div>
+                <div class="divbutton" id="buyStealingMoney" onclick="buyStealMoney()">Buy 'Stealing Money': 1000 ants</div>
+            </div>
+        </div>
+        
+        <script src="game.js"></script>
+    </body>
+</html>
