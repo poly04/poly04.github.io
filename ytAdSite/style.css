@@ -1,0 +1,52 @@
+body {
+  background: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+}
+
+.header {
+  background-color: rgb(230, 230, 230);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(200, 200, 200);
+  border-bottom-width: 2px;
+}
+
+.linkText {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.linkText:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: rgb(230, 230, 230);
+  border-radius: 25px;
+  display: inline-block;
+  padding: 0 20px 0 20px;
+  box-shadow: 10px 10px 5px #888888;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.footer {
+  background: rgb(230, 230, 230);
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top-style: solid;
+  border-top-color: rgb(200, 200, 200);
+  border-top-width: 2px;
+}
